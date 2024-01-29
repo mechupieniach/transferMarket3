@@ -28,7 +28,9 @@ form.onsubmit = () => {
 }
 
 const download = async () => {
+    if (downloadButton) downloadButton.setAttribute("hidden","hidden")
     const response = await fetch('http://localhost:8080/download')
+    
     return response
 }
 
