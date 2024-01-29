@@ -62,7 +62,7 @@ const generateFile = async (link, eventEmitter) => {
     }
 
     const fileName = playerName.replace(' ','')
-    workbook.write(`TransferMarket${fileName}.xlsx`, (_, stats) => {
+    workbook.write(`TransferMarket${fileName}.xlsx`, () => {
         eventEmitter.emit('ready', fileName)
     })
     
