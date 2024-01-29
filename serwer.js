@@ -64,6 +64,7 @@ http.createServer( async (req, res) => {
             break
         case '/download':
             eventEmitter.emit('data')
+            res.end()
             break
         default:
             res.writeHead(404)
